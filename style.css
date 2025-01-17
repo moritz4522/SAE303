@@ -1,0 +1,20 @@
+.bento-item {
+    height: 200px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.bento-tall {
+    height: 410px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.swapping {
+    transform: scale(1.1); 
+    opacity: 0.8;
+}
