@@ -14,3 +14,15 @@
     background-color: #c4c4c4;
 }
 
+.bento-medium {
+    height: auto;
+    border-radius: 15px;
+}
+
+.active {
+    filter: brightness(80%);    
+}
+
+img {
+    border-radius: 15px;
+}
