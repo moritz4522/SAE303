@@ -13,10 +13,11 @@
     <div class="container my-3 mx-6">
         <h1 class="text-center mb-4 fs-2">Avec qui l’Américain moyen passe-t-il sa journée en fonction de son âge ?</h1>
         <div class="row g-4">
-            <!-- Large item -->
+            
+            <!-- GRAPHIQUE 1 -->
             <div class="col-md-8">
-                <div class="bento-item bento-tall bg-light text-dark d-flex flex-row px-3 py-5 gap-1">
-                    <div class="col-lg-8" style="height: 400px; width: 400px;">
+                <div class="bento-item bento-tall bg-light text-dark d-flex flex-row justify-content-around px-3 py-5 gap-1">
+                    <div class="col-lg-8" style="height: 500px; width: 450px;">
                         <canvas id="chartRadar" ></canvas>
                     </div>
                     <div class="d-flex flex-column gap-3">
@@ -30,29 +31,37 @@
                     </div>
                 </div>
             </div>
-            <!-- One long item -->
+           
+            <!-- CONTEXTE -->
             <div class="col-md-4">
                         <div class="bento-tall bg-light text-dark py-4" onclick="swapWithLarge(this)">
                             <h2 class="px-4">Contexte</h2>
                             <p class="fs-6 fw-light px-4 p">Avec qui passons-nous nos journées ? La réponse à cette question varie considérablement en fonction de notre âge. Pour mieux comprendre l’évolution de nos journées standard et des personnes avec qui nous les partageons, nous avons sélectionné uniquement les données représentant une journée typique pour une personne de 20 ans et une autre de 80 ans. Ces données sont représentatives des transformations de notre quotidien au fil du temps et permettent de mettre en lumière les changements significatifs qu’apporte le vieillissement dans nos interactions et modes de vie.</p>
                         </div>
             </div>
-            <!-- Medium item -->
+
+            <!-- EXPLICATION -->
             <div class="col-md-4">
                 <div class="bento-item bg-light text-dark" onclick="swapWithLarge(this)">
                     Medium Item 1
                 </div>
             </div>
-            <!-- Medium item -->
-            <div class="col-md-4">
-                <div class="bento-item bg-light text-dark" onclick="swapWithLarge(this)">
-                    Medium Item 2
-                </div>
-            </div>
-            <!-- Medium item -->
-            <div class="col-md-4">
-                <div class="bento-item bg-light text-dark" onclick="swapWithLarge(this)">
-                    Medium Item 3
+            
+            <!-- GRAPHIQUE 2 -->
+            <div class="col-md-8">
+                <div class="bento-item bento-tall bg-light text-dark d-flex flex-row justify-content-around px-3 py-5 gap-1">
+                    <div class="col-lg-8" style="height: 500px; width: 450px;">
+                        <canvas id="chartRadar"></canvas>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                        <button type="button" class="btn btn-primary btn-sm"onclick="UpdateChart(data20)" id="age" value="data20">20 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data30)" id="age" value="data30">30 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data40)" id="age" value="data40">40 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data50)" id="age" value="data50">50 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data60)" id="age" value="data60">60 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data70)" id="age" value="data70">70 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data80)" id="age" value="data80">80 ans</button>
+                    </div>
                 </div>
             </div>
         </div>
