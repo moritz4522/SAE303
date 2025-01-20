@@ -1,3 +1,5 @@
+/* GRAPHIQUE RADAR */
+
 let ctxRadar = document.getElementById('chartRadar');
 let data20 = [4.63, 0.44, 2.89, 0.91, 2.05, 2.40];
 let data30 = [4.17, 3, 1.21, 3.33, 0.9, 3.6];
@@ -73,3 +75,7 @@ function UpdateChart(label) {
     myChart.update();
     console.log(label);
 }
+
+
+/* GRAPHIQUE DONUT */
+
