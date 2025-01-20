@@ -1,28 +1,3 @@
-function swapWithLarge(smallBox) {
-    const largeBox = document.querySelector('.bento-tall');
-    const canvas = document.getElementById('chartRadar');
-
-    // Ajoutez une classe pour déclencher l'animation
-    largeBox.classList.add('swapping');
-    smallBox.classList.add('swapping');
-
-    // Forcez un reflow pour que le navigateur applique les styles immédiatement
-    void largeBox.offsetWidth; // ou largeBox.getBoundingClientRect();
-
-    // Attendez la fin de l'animation avant d'échanger le contenu
-    setTimeout(() => {
-        // Échangez les contenus
-        const tempContent = largeBox.innerHTML;
-        largeBox.innerHTML = smallBox.innerHTML;
-        smallBox.innerHTML = tempContent;
-
-        // Retirez la classe d'animation après l'échange
-        largeBox.classList.remove('swapping');
-        smallBox.classList.remove('swapping');
-    }, 500); // La durée doit correspondre à celle définie dans les transitions CSS
-}
-
-
 let ctxRadar = document.getElementById('chartRadar');
 let data20 = [4.63, 0.44, 2.89, 0.91, 2.05, 2.40];
 let data30 = [4.17, 3, 1.21, 3.33, 0.9, 3.6];
