@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <div class="container my-3 mx-6">
         <h1 class="text-center mb-4 fs-2">Avec qui l’Américain moyen passe-t-il sa journée en fonction de son âge ?</h1>
         <div class="row g-4">
-            
+
             <!-- GRAPHIQUE 1 -->
             <div class="col-md-8">
-                <div class="bento-item bento-tall bg-light text-dark shadow d-flex flex-row justify-content-around px-3 py-5 gap-1">
+                <div
+                    class="bento-item bento-tall bg-light text-dark shadow d-flex flex-row justify-content-around px-3 py-5 gap-1">
                     <div class="col-lg-8" style="height: 500px; width: 450px;">
-                        <canvas id="chartRadar" ></canvas>
+                        <canvas id="chartRadar"></canvas>
                     </div>
                     <div class="d-flex flex-column gap-3">
-                        <button type="button" class="btn btn-primary btn-sm"onclick="UpdateChart(data20)" id="age" value="data20">20 ans</button>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data30)" id="age" value="data30">30 ans</button>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data40)" id="age" value="data40">40 ans</button>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data50)" id="age" value="data50">50 ans</button>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data60)" id="age" value="data60">60 ans</button>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data70)" id="age" value="data70">70 ans</button>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data80)" id="age" value="data80">80 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data20)" id="age"
+                            value="data20">20 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data30)" id="age"
+                            value="data30">30 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data40)" id="age"
+                            value="data40">40 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data50)" id="age"
+                            value="data50">50 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data60)" id="age"
+                            value="data60">60 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data70)" id="age"
+                            value="data70">70 ans</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data80)" id="age"
+                            value="data80">80 ans</button>
                     </div>
                 </div>
             </div>
-           
+
             <!-- CONTEXTE -->
             <div class="col-md-4">
-                        <div class="bento-tall bg-light shadow text-dark py-4">
-                            <h2 class="px-4">Contexte</h2>
-                            <p class="fs-6 fw-light px-4 p">Avec qui passons-nous nos journées ? La réponse à cette question varie considérablement en fonction de notre âge. Pour mieux comprendre l’évolution de nos journées standard et des personnes avec qui nous les partageons, nous avons sélectionné uniquement les données représentant une journée typique pour une personne de 20 ans et une autre de 80 ans. Ces données sont représentatives des transformations de notre quotidien au fil du temps et permettent de mettre en lumière les changements significatifs qu’apporte le vieillissement dans nos interactions et modes de vie.</p>
-                        </div>
+                <div class="bento-tall bg-light shadow text-dark py-4">
+                    <h2 class="px-4">Contexte</h2>
+                    <p class="fs-6 fw-light px-4 p">Avec qui passons-nous nos journées ? La réponse à cette question
+                        varie considérablement en fonction de notre âge. Pour mieux comprendre l’évolution de nos
+                        journées standard et des personnes avec qui nous les partageons, nous avons sélectionné
+                        uniquement les données représentant une journée typique pour une personne de 20 ans et une autre
+                        de 80 ans. Ces données sont représentatives des transformations de notre quotidien au fil du
+                        temps et permettent de mettre en lumière les changements significatifs qu’apporte le
+                        vieillissement dans nos interactions et modes de vie.</p>
+                </div>
             </div>
 
             <!-- EXPLICATION -->
@@ -46,16 +65,179 @@
                     Medium Item 1
                 </div>
             </div>
-            
+
             <!-- GRAPHIQUE 2 -->
             <div class="col-md-8">
-                <div class="bento-item bento-tall bg-light shadow text-dark d-flex flex-row justify-content-around px-3 py-5 gap-1">
+                <div
+                    class="bento-item bento-tall bg-light shadow text-dark d-flex flex-row justify-content-around px-3 py-5 gap-1">
                     <div class="col-lg-8" style="height: 500px; width: 450px;">
                         <!-- GRRAPHIQUE DONUT -->
+
+
+                        
+                        <head>
+                            <title>Double Pie Charts</title>
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        </head>
+
+                        <body>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="position: relative; margin-top: 65px"; >
+                                    <!-- Titre pour le premier graphique -->
+                                    <h2 style="text-align: center;  margin-left: -120px;   margin-bottom: 20px;">20 ans</h2>
+                                    <canvas id="chart1" style="margin-left: -135px; margin-right: 20px"  ></canvas>
+                                    <div id="chart1-label"
+                                        style="position: absolute; top: 55.5%; left: 50%; transform: translate(-110%, -50%); font-size: 40px; font-weight: bold; color: black;">
+                                    </div>
+
+                                </div>
+
+                                <div class="d-flex flex-column gap-3">
+
+                                    <button type="button"  class="btn btn-primary btn-sm"
+                                        onclick="showValue(1)">Seul</button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="showValue(0)">Avec ses
+                                        amis</button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="showValue(2)">Avec sa
+                                        famille</button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="showValue(3)">Avec son
+                                        partenaire</button>
+
+
+                                </div>
+
+                                
+
+                                <div style="position: relative; margin-top: 65px">
+                                    <!-- Titre pour le deuxième graphique -->
+                                    <h2 style="text-align: center; margin-left: -120; margin-bottom: 20px;">80 ans</h2>
+                                    <canvas id="chart2" style="margin-left: 20px;"></canvas>
+                                    <div id="chart2-label"
+                                        style="position: absolute; top: 55%; left: 54%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold; color: black;">
+                                    </div>
+                                </div>
+                            </div>
+
+                         
+                            <script>
+                                // Données pour le premier diagramme
+                                const data1 = {
+                                    datasets: [{
+                                        label: '20 ans',
+                                        data: [19.8, 38.8, 46.76, 0.35],
+                                        backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
+                                        hoverOffset: 4
+                                    }]
+                                };
+
+                                // Données pour le deuxième diagramme
+                                const data2 = {
+                                    datasets: [{
+                                        label: '80 ans',
+                                        data: [4.8, 57.09, 6.9, 31.2],
+                                        backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
+                                        hoverOffset: 4
+                                    }]
+                                };
+
+                                // Options générales
+                                const options = {
+                                    responsive: true,
+                                    plugins: {
+                                        legend: {
+                                            display: false
+                                        },
+                                        tooltip: {
+                                            enabled: true
+                                        }
+                                    }
+                                };
+
+                                // Création des graphiques
+                                const chart1 = new Chart(document.getElementById('chart1'), {
+                                    type: 'doughnut',
+                                    data: data1,
+                                    options: options
+                                });
+
+                                const chart2 = new Chart(document.getElementById('chart2'), {
+                                    type: 'doughnut',
+                                    data: data2,
+                                    options: options
+                                });
+
+                                // Suivi des éléments sélectionnés
+                                let selectedCategory1 = null;
+                                let selectedCategory2 = null;
+
+                                function showValue(index) {
+                                    const value1 = chart1.data.datasets[0].data[index];
+                                    const value2 = chart2.data.datasets[0].data[index];
+
+                                    // Si la catégorie est déjà sélectionnée, on la désélectionne
+                                    if (selectedCategory1 === index) {
+                                        resetChart(chart1);
+                                        resetChart(chart2);
+                                        selectedCategory1 = null;
+                                        selectedCategory2 = null;
+                                        document.getElementById('chart1-label').innerText = '';
+                                        document.getElementById('chart2-label').innerText = '';
+                                    } else {
+                                        document.getElementById('chart1-label').innerText = value1 + '%';
+                                        document.getElementById('chart2-label').innerText = value2 + '%';
+
+                                        selectedCategory1 = index;
+                                        selectedCategory2 = index;
+
+                                        updateChart(chart1, index);
+                                        updateChart(chart2, index);
+                                    }
+                                }
+
+                                // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
+                                function updateChart(chart, index) {
+                                    const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
+
+                                    chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
+                                        return i === index ? color : setOpacity(color, 0.5);
+                                    });
+
+                                    chart.update();
+                                }
+
+                                // Fonction pour réinitialiser la couleur des graphiques
+                                function resetChart(chart) {
+                                    const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
+                                    chart.data.datasets[0].backgroundColor = originalColors;
+                                    chart.update();
+                                }
+
+                                // Fonction pour définir l'opacité d'une couleur
+                                function setOpacity(color, opacity) {
+                                    const rgba = hexToRgba(color, opacity);
+                                    return rgba;
+                                }
+
+                                // Convertir une couleur hexadécimale en RGBA
+                                function hexToRgba(hex, opacity) {
+                                    const bigint = parseInt(hex.slice(1), 16);
+                                    const r = (bigint >> 16) & 255;
+                                    const g = (bigint >> 8) & 255;
+                                    const b = bigint & 255;
+                                    return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+                                }
+                            </script>
+                        </body>
+
+                        
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="js/script.js"></script></html>
+<script src="js/script.js"></script>
+
+</html>
