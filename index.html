@@ -15,15 +15,14 @@
 </head>
 
 <body>
-    <button
-        type="button"
-        class="btn btn-danger btn-floating btn-lg"
-        id="btn-back-to-top"
-        >
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 15 20">
-            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
-          </svg>
-</button>
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-up"
+            viewBox="0 0 15 20">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+        </svg>
+    </button>
+
     <div class="container my-3 mx-6">
         <h1 class="text-center mb-4 fs-2">Avec qui l’Américain moyen passe-t-il sa journée en fonction de son âge ?</h1>
         <div class="row g-4">
@@ -51,7 +50,13 @@
                 <!-- GRAPHIQUE 1 -->
                 <div class="bento-medium bg-light shadow text-dark py-2 mt-4">
                     <h2 class="px-4">Contexte a modifier</h2>
-                    <p class="fs-6 fw-light px-4 ">Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam sub vultu latens, odorandi vias periculorum occultas perquam sagax. is in Brittanniam missus ut militares quosdam perduceret ausos conspirasse Magnentio, cum reniti non possent, iussa licentius supergressus fluminis modo fortunis conplurium sese repentinus infudit et ferebatur per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens et quosdam obterens manicis, crimina scilicet multa consarcinando a veritate longe discreta. unde admissum est facinus impium, quod Constanti tempus nota inusserat sempiterna.</p>
+                    <p class="fs-6 fw-light px-4 ">Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam
+                        sub vultu latens, odorandi vias periculorum occultas perquam sagax. is in Brittanniam missus ut
+                        militares quosdam perduceret ausos conspirasse Magnentio, cum reniti non possent, iussa
+                        licentius supergressus fluminis modo fortunis conplurium sese repentinus infudit et ferebatur
+                        per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens et quosdam obterens
+                        manicis, crimina scilicet multa consarcinando a veritate longe discreta. unde admissum est
+                        facinus impium, quod Constanti tempus nota inusserat sempiterna.</p>
                 </div>
             </div>
             <!-- ROW 2 -->
@@ -117,137 +122,122 @@
                     <div class="col-lg-8" style="height: 500px; width: 450px;">
                         <!-- GRRAPHIQUE DONUT -->
 
-
-                        
-                        <head>
-                            <title>Double Pie Charts</title>
-                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                        </head>
-
-                        <body>
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <div style="position: relative; margin-top: 65px"; >
-                                    <!-- Titre pour le premier graphique -->
-                                    <h2 style="text-align: center;  margin-left: -120px;   margin-bottom: 20px;">20 ans</h2>
-                                    <canvas id="chart1" style="margin-left: -135px; margin-right: 20px"  ></canvas>
-                                    <div id="chart1-label"
-                                        style="position: absolute; top: 55.5%; left: 50%; transform: translate(-130%, -30%); font-size: 30px; font-weight: bold; color: black;">
-                                    </div>
-
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="position: relative; margin-top: 65px" ;>
+                                <!-- Titre pour le premier graphique -->
+                                <h2 style="text-align: center;  margin-left: -120px;   margin-bottom: 20px;">20 ans
+                                </h2>
+                                <canvas id="chart1" style="margin-left: -135px; margin-right: 20px"></canvas>
+                                <div id="chart1-label"
+                                    style="position: absolute; top: 55.5%; left: 50%; transform: translate(-110%, -50%); font-size: 40px; font-weight: bold; color: black;">
                                 </div>
 
-                                <div style="position: relative; margin-top: 90px"; class="d-flex flex-column gap-3">
-
-                                    <button type="button"  class="btn btn-primary btn-sm"
-                                        onclick="showValue(1)">Seul</button>
-                                    <button type="button" class="btn btn-primary btn-sm" onclick="showValue(0)">Avec ses
-                                        amis</button>
-                                    <button type="button" class="btn btn-primary btn-sm" onclick="showValue(2)">Avec sa
-                                        famille</button>
-                                    <button type="button" class="btn btn-primary btn-sm" onclick="showValue(3)">Avec son
-                                        partenaire</button>
-
-
-                                </div>
-
-                                
-
-                                <div style="position: relative; margin-top: 65px">
-                                    <!-- Titre pour le deuxième graphique -->
-                                    <h2 style="text-align: center; margin-left: -120; margin-bottom: 20px;">80 ans</h2>
-                                    <canvas id="chart2" style="margin-left: 20px;"></canvas>
-                                    <div id="chart2-label"
-                                        style="position: absolute; top: 55%; left: 54%; transform: translate(-45%, -30%); font-size: 30px; font-weight: bold; color: black;">
-                                    </div>
-                                </div>
                             </div>
 
-                         
-                            <script>
-                                // Données pour le premier diagramme
-                                const data1 = {
-                                    datasets: [{
-                                        label: '20 ans',
-                                        data: [19.8, 38.8, 46.76, 0.35],
-                                        backgroundColor: ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'],
-                                        hoverOffset: 4
-                                    }]
-                                };
+                            <div style="position: relative; margin-top: 90px" ; class="d-flex flex-column gap-3">
 
-                                // Données pour le deuxième diagramme
-                                const data2 = {
-                                    datasets: [{
-                                        label: '80 ans',
-                                        data: [4.8, 57.09, 6.9, 31.2],
-                                        backgroundColor:  ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'],
-                                        hoverOffset: 4
-                                    }]
-                                };
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="showValue(1)">Seul</button>
+                                <button type="button" class="btn btn-primary btn-sm" onclick="showValue(0)">Avec ses
+                                    amis</button>
+                                <button type="button" class="btn btn-primary btn-sm" onclick="showValue(2)">Avec sa
+                                    famille</button>
+                                <button type="button" class="btn btn-primary btn-sm" onclick="showValue(3)">Avec son
+                                    partenaire</button>
 
-                                // Options générales
-                                const options = {
-                                    responsive: true,
-                                    plugins: {
-                                        legend: {
-                                            display: false
-                                        },
-                                        tooltip: {
-                                            enabled: true
-                                        }
-                                    }
-                                };
 
-                                // Création des graphiques
-                                const chart1 = new Chart(document.getElementById('chart1'), {
-                                    type: 'doughnut',
-                                    data: data1,
-                                    options: options
-                                });
+                            </div>
 
-                                const chart2 = new Chart(document.getElementById('chart2'), {
-                                    type: 'doughnut',
-                                    data: data2,
-                                    options: options
-                                });
 
-                                // Suivi des éléments sélectionnés
-                                let selectedCategory1 = null;
-                                let selectedCategory2 = null;
 
-                                function showValue(index) {
-                                    const value1 = chart1.data.datasets[0].data[index];
-                                    const value2 = chart2.data.datasets[0].data[index];
+                            <div style="position: relative; margin-top: 65px">
+                                <!-- Titre pour le deuxième graphique -->
+                                <h2 style="text-align: center; margin-left: -120; margin-bottom: 20px;">80 ans</h2>
+                                <canvas id="chart2" style="margin-left: 20px;"></canvas>
+                                <div id="chart2-label"
+                                    style="position: absolute; top: 55%; left: 54%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold; color: black;">
+                                </div>
+                            </div>
+                        </div>
 
-                                    // Si la catégorie est déjà sélectionnée, on la désélectionne
-                                    if (selectedCategory1 === index) {
-                                        resetChart(chart1);
-                                        resetChart(chart2);
-                                        selectedCategory1 = null;
-                                        selectedCategory2 = null;
-                                        document.getElementById('chart1-label').innerText = '';
-                                        document.getElementById('chart2-label').innerText = '';
-                                    } else {
-                                        document.getElementById('chart1-label').innerText = value1 + '%';
-                                        document.getElementById('chart2-label').innerText = value2 + '%';
 
-                                        selectedCategory1 = index;
-                                        selectedCategory2 = index;
+                        <script>
+                            // Données pour le premier diagramme
+                            const data1 = {
+                                datasets: [{
+                                    label: '20 ans',
+                                    data: [19.8, 38.8, 46.76, 0.35],
+                                    backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
+                                    hoverOffset: 4
+                                }]
+                            };
 
-                                        updateChart(chart1, index);
-                                        updateChart(chart2, index);
+                            // Données pour le deuxième diagramme
+                            const data2 = {
+                                datasets: [{
+                                    label: '80 ans',
+                                    data: [4.8, 57.09, 6.9, 31.2],
+                                    backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
+                                    hoverOffset: 4
+                                }]
+                            };
+
+                            // Options générales
+                            const options = {
+                                responsive: true,
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    },
+                                    tooltip: {
+                                        enabled: true
                                     }
                                 }
+                            };
 
                                 // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
                                 function updateChart(chart, index) {
                                     const originalColors =  ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'];
+                            // Création des graphiques
+                            const chart1 = new Chart(document.getElementById('chart1'), {
+                                type: 'doughnut',
+                                data: data1,
+                                options: options
+                            });
 
-                                    chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
-                                        return i === index ? color : setOpacity(color, 0.5);
-                                    });
+                            const chart2 = new Chart(document.getElementById('chart2'), {
+                                type: 'doughnut',
+                                data: data2,
+                                options: options
+                            });
 
-                                    chart.update();
+                            // Suivi des éléments sélectionnés
+                            let selectedCategory1 = null;
+                            let selectedCategory2 = null;
+
+                            function showValue(index) {
+                                const value1 = chart1.data.datasets[0].data[index];
+                                const value2 = chart2.data.datasets[0].data[index];
+
+                                // Si la catégorie est déjà sélectionnée, on la désélectionne
+                                if (selectedCategory1 === index) {
+                                    resetChart(chart1);
+                                    resetChart(chart2);
+                                    selectedCategory1 = null;
+                                    selectedCategory2 = null;
+                                    document.getElementById('chart1-label').innerText = '';
+                                    document.getElementById('chart2-label').innerText = '';
+                                } else {
+                                    document.getElementById('chart1-label').innerText = value1 + '%';
+                                    document.getElementById('chart2-label').innerText = value2 + '%';
+
+                                    selectedCategory1 = index;
+                                    selectedCategory2 = index;
+
+                                    updateChart(chart1, index);
+                                    updateChart(chart2, index);
                                 }
+                            }
 
                                 // Fonction pour réinitialiser la couleur des graphiques
                                 function resetChart(chart) {
@@ -255,27 +245,39 @@
                                     chart.data.datasets[0].backgroundColor = originalColors;
                                     chart.update();
                                 }
+                            // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
+                            function updateChart(chart, index) {
+                                const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
 
-                                // Fonction pour définir l'opacité d'une couleur
-                                function setOpacity(color, opacity) {
-                                    const rgba = hexToRgba(color, opacity);
-                                    return rgba;
-                                }
+                                chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
+                                    return i === index ? color : setOpacity(color, 0.5);
+                                });
 
-                                // Convertir une couleur hexadécimale en RGBA
-                                function hexToRgba(hex, opacity) {
-                                    const bigint = parseInt(hex.slice(1), 16);
-                                    const r = (bigint >> 16) & 255;
-                                    const g = (bigint >> 8) & 255;
-                                    const b = bigint & 255;
-                                    return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-                                }
-                            </script>
-                        </body>
+                                chart.update();
+                            }
 
-                        
+                            // Fonction pour réinitialiser la couleur des graphiques
+                            function resetChart(chart) {
+                                const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
+                                chart.data.datasets[0].backgroundColor = originalColors;
+                                chart.update();
+                            }
 
+                            // Fonction pour définir l'opacité d'une couleur
+                            function setOpacity(color, opacity) {
+                                const rgba = hexToRgba(color, opacity);
+                                return rgba;
+                            }
 
+                            // Convertir une couleur hexadécimale en RGBA
+                            function hexToRgba(hex, opacity) {
+                                const bigint = parseInt(hex.slice(1), 16);
+                                const r = (bigint >> 16) & 255;
+                                const g = (bigint >> 8) & 255;
+                                const b = bigint & 255;
+                                return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -285,9 +287,11 @@
             <div class="col-md-7">
                 <div class="bento-medium bg-light shadow text-dark py-4">
                     <h2 class="px-4">Sources</h2>
-                    <p class="fs-6 fw-light px-4 p">L’étude de world in data: Who Americans spend their time with, by age 
-                        <a href="https://ourworldindata.org/grapher/time-spent-with-relationships-by-age-us?time=earliest..latest">https://ourworldindata.org/grapher/time-spent-with-relationships-by-age-us?time=earliest..latest</a>
-                        </p>
+                    <p class="fs-6 fw-light px-4 p">L’étude de world in data: Who Americans spend their time with, by
+                        age
+                        <a
+                            href="https://ourworldindata.org/grapher/time-spent-with-relationships-by-age-us?time=earliest..latest">https://ourworldindata.org/grapher/time-spent-with-relationships-by-age-us?time=earliest..latest</a>
+                    </p>
                 </div>
             </div>
             <div class="col-md-5">
@@ -296,7 +300,7 @@
                     <p class="fs-6 fw-light px-4 p">
                         Moritz Blunklallet, Maël Quilgars, Youna Fegar<br>
                         IUT de Lannion - MMI - Janvier 2025
-                        </p>
+                    </p>
                 </div>
             </div>
         </div>
