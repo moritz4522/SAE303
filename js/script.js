@@ -166,8 +166,121 @@ const config = {
     }
 };
 
-const myChart = new Chart(
+const myChart1 = new Chart(
     document.getElementById('chart'),
     config
 );
 
+
+
+
+
+
+//Diagramme donut
+
+  // Données pour le premier diagramme
+  const data1 = {
+    datasets: [{
+        label: '20 ans',
+        data: [19.8, 38.8, 46.76, 0.35],
+        backgroundColor: ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'],
+        hoverOffset: 4
+    }]
+};
+
+// Données pour le deuxième diagramme
+const data2 = {
+    datasets: [{
+        label: '80 ans',
+        data: [4.8, 57.09, 6.9, 31.2],
+        backgroundColor:  ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'],
+        hoverOffset: 4
+    }]
+};
+
+// Options générales
+const options = {
+    responsive: true,
+    plugins: {
+        legend: {
+            display: false
+        },
+        tooltip: {
+            enabled: true
+        }
+    }
+};
+
+// Création des graphiques
+const chart1 = new Chart(document.getElementById('chart1'), {
+    type: 'doughnut',
+    data: data1,
+    options: options
+});
+
+const chart2 = new Chart(document.getElementById('chart2'), {
+    type: 'doughnut',
+    data: data2,
+    options: options
+});
+
+// Suivi des éléments sélectionnés
+let selectedCategory1 = null;
+let selectedCategory2 = null;
+
+function showValue(index) {
+    const value1 = chart1.data.datasets[0].data[index];
+    const value2 = chart2.data.datasets[0].data[index];
+
+    // Si la catégorie est déjà sélectionnée, on la désélectionne
+    if (selectedCategory1 === index) {
+        resetChart(chart1);
+        resetChart(chart2);
+        selectedCategory1 = null;
+        selectedCategory2 = null;
+        document.getElementById('chart1-label').innerText = '';
+        document.getElementById('chart2-label').innerText = '';
+    } else {
+        document.getElementById('chart1-label').innerText = value1 + '%';
+        document.getElementById('chart2-label').innerText = value2 + '%';
+
+        selectedCategory1 = index;
+        selectedCategory2 = index;
+
+        updateChart(chart1, index);
+        updateChart(chart2, index);
+    }
+}
+
+// Fonction pour mettre à jour la couleur de la catégorie sélectionnée
+function updateChart(chart, index) {
+    const originalColors =  ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'];
+
+    chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
+        return i === index ? color : setOpacity(color, 0.5);
+    });
+
+    chart.update();
+}
+
+// Fonction pour réinitialiser la couleur des graphiques
+function resetChart(chart) {
+    const originalColors = ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'];
+    chart.data.datasets[0].backgroundColor = originalColors;
+    chart.update();
+}
+
+// Fonction pour définir l'opacité d'une couleur
+function setOpacity(color, opacity) {
+    const rgba = hexToRgba(color, opacity);
+    return rgba;
+}
+
+// Convertir une couleur hexadécimale en RGBA
+function hexToRgba(hex, opacity) {
+    const bigint = parseInt(hex.slice(1), 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+}

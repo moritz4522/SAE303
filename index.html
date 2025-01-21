@@ -50,8 +50,7 @@
 
                 <!-- GRAPHIQUE 1 -->
                 <div class="bento-medium bg-light shadow text-dark py-2 mt-4">
-                    <h2 class="px-4">Contexte a modifier</h2>
-                    <canvas id="chart" width="502px" height="256px"></canvas>
+                    <canvas id="chart" width="400px" height="256px"></canvas>
                 </div>
             </div>
             <!-- ROW 2 -->
@@ -124,7 +123,7 @@
                                 </h2>
                                 <canvas id="chart1" style="margin-left: -135px; margin-right: 20px"></canvas>
                                 <div id="chart1-label"
-                                    style="position: absolute; top: 55.5%; left: 50%; transform: translate(-110%, -50%); font-size: 40px; font-weight: bold; color: black;">
+                                    style="position: absolute; top: 55.5%; left: 50%; transform: translate(-135%, -45%); font-size: 30px; font-weight: bold; color: black;">
                                 </div>
 
                             </div>
@@ -150,130 +149,13 @@
                                 <h2 style="text-align: center; margin-left: -120; margin-bottom: 20px;">80 ans</h2>
                                 <canvas id="chart2" style="margin-left: 20px;"></canvas>
                                 <div id="chart2-label"
-                                    style="position: absolute; top: 55%; left: 54%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold; color: black;">
+                                    style="position: absolute; top: 55%; left: 54%; transform: translate(-50%, -45%); font-size: 30px; font-weight: bold; color: black;">
                                 </div>
                             </div>
                         </div>
 
 
-                        <script>
-                            // Données pour le premier diagramme
-                            const data1 = {
-                                datasets: [{
-                                    label: '20 ans',
-                                    data: [19.8, 38.8, 46.76, 0.35],
-                                    backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
-                                    hoverOffset: 4
-                                }]
-                            };
 
-                            // Données pour le deuxième diagramme
-                            const data2 = {
-                                datasets: [{
-                                    label: '80 ans',
-                                    data: [4.8, 57.09, 6.9, 31.2],
-                                    backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
-                                    hoverOffset: 4
-                                }]
-                            };
-
-                            // Options générales
-                            const options = {
-                                responsive: true,
-                                plugins: {
-                                    legend: {
-                                        display: false
-                                    },
-                                    tooltip: {
-                                        enabled: true
-                                    }
-                                }
-                            };
-
-                                // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
-                                function updateChart(chart, index) {
-                                    const originalColors =  ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'];
-                            // Création des graphiques
-                            const chart1 = new Chart(document.getElementById('chart1'), {
-                                type: 'doughnut',
-                                data: data1,
-                                options: options
-                            });
-
-                            const chart2 = new Chart(document.getElementById('chart2'), {
-                                type: 'doughnut',
-                                data: data2,
-                                options: options
-                            });
-
-                            // Suivi des éléments sélectionnés
-                            let selectedCategory1 = null;
-                            let selectedCategory2 = null;
-
-                            function showValue(index) {
-                                const value1 = chart1.data.datasets[0].data[index];
-                                const value2 = chart2.data.datasets[0].data[index];
-
-                                // Si la catégorie est déjà sélectionnée, on la désélectionne
-                                if (selectedCategory1 === index) {
-                                    resetChart(chart1);
-                                    resetChart(chart2);
-                                    selectedCategory1 = null;
-                                    selectedCategory2 = null;
-                                    document.getElementById('chart1-label').innerText = '';
-                                    document.getElementById('chart2-label').innerText = '';
-                                } else {
-                                    document.getElementById('chart1-label').innerText = value1 + '%';
-                                    document.getElementById('chart2-label').innerText = value2 + '%';
-
-                                    selectedCategory1 = index;
-                                    selectedCategory2 = index;
-
-                                    updateChart(chart1, index);
-                                    updateChart(chart2, index);
-                                }
-                            }
-
-                                // Fonction pour réinitialiser la couleur des graphiques
-                                function resetChart(chart) {
-                                    const originalColors =  ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'];
-                                    chart.data.datasets[0].backgroundColor = originalColors;
-                                    chart.update();
-                                }
-                            // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
-                            function updateChart(chart, index) {
-                                const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
-
-                                chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
-                                    return i === index ? color : setOpacity(color, 0.5);
-                                });
-
-                                chart.update();
-                            }
-
-                            // Fonction pour réinitialiser la couleur des graphiques
-                            function resetChart(chart) {
-                                const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
-                                chart.data.datasets[0].backgroundColor = originalColors;
-                                chart.update();
-                            }
-
-                            // Fonction pour définir l'opacité d'une couleur
-                            function setOpacity(color, opacity) {
-                                const rgba = hexToRgba(color, opacity);
-                                return rgba;
-                            }
-
-                            // Convertir une couleur hexadécimale en RGBA
-                            function hexToRgba(hex, opacity) {
-                                const bigint = parseInt(hex.slice(1), 16);
-                                const r = (bigint >> 16) & 255;
-                                const g = (bigint >> 8) & 255;
-                                const b = bigint & 255;
-                                return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-                            }
-
-                        </script>
                     </div>
                 </div>
             </div>
