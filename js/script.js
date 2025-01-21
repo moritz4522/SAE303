@@ -103,3 +103,71 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+// Graphique Moritz
+
+const labels = ['20 ans', '30 ans', '40 ans', '50 ans', '60 ans', '70 ans', '80 ans'];
+const data = {
+    labels: labels,
+    datasets: [
+        {
+            label: 'Temps passé seul',
+            data: [34.77, 25.74, 27.80, 38.79, 45.55, 50.76, 55.71],
+            fill: false,
+            borderColor: 'rgb(228, 228, 115)',
+            tension: 0.1
+        },
+        {
+            label: 'Temps passé avec les collègues',
+            data: [18.02, 22.20, 18.72, 18.06, 13.88, 3.04, 0.61],
+            fill: false,
+            borderColor: 'rgb(188, 107, 188)',
+            tension: 0.1
+        },
+        {
+            label: 'Temps passé avec les enfants',
+            data: [6.84, 20.56, 24.22, 14.23, 6.83, 5.68, 5.26],
+            fill: false,
+            borderColor: 'rgb(92, 175, 92)',
+            tension: 0.1
+        },
+        {
+            label: 'Temps passé avec le partenaire',
+            data: [3.3, 18.53, 20.18, 18.79, 22.55, 29.62, 26.53],
+            fill: false,
+            borderColor: 'rgb(216, 152, 143)',
+            tension: 0.1
+        },
+        {
+            label: 'Temps passé avec la famille',
+            data: [21.69, 7.46, 5.46, 7.02, 7.22, 5.43, 7.72],
+            fill: false,
+            borderColor: 'rgb(226, 170, 96)',
+            tension: 0.1
+        },
+        {
+            label: 'Temps passé avec les Amis',
+            data: [15.37, 5.5, 3.62, 3.11, 3.96, 5.18, 4.16],
+            fill: false,
+            borderColor: 'rgb(200, 86, 49)',
+            tension: 0.1
+        }
+    ]
+};
+
+const config = {
+    type: 'line',
+    data: data,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+};
+
+const myChart = new Chart(
+    document.getElementById('chart'),
+    config
+);
+
