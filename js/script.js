@@ -166,7 +166,7 @@ const config = {
     }
 };
 
-const myChart = new Chart(
+const myChart1 = new Chart(
     document.getElementById('chart'),
     config
 );
