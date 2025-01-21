@@ -29,8 +29,9 @@
             <!-- ROW 1 -->
             <!-- POSTER -->
             <div class="col-md-5">
-                <div class="bento-item bento-tall bg-light shadow text-dark d-flex flex-row justify-content-around px-3 py-5 gap-1"
+                <div class="bento-item bento-tall bg-light shadow text-dark d-flex flex-column justify-content-around px-3 py-2 gap-1 "
                     style="height: 100%; width: 100%;">
+                    <h2 class="px-4">Notre datalogy</h2>
                     <img src="img/affiche.jpg" class="img-fluid" alt="">
                 </div>
             </div>
@@ -50,13 +51,7 @@
                 <!-- GRAPHIQUE 1 -->
                 <div class="bento-medium bg-light shadow text-dark py-2 mt-4">
                     <h2 class="px-4">Contexte a modifier</h2>
-                    <p class="fs-6 fw-light px-4 ">Inter quos Paulus eminebat notarius ortus in Hispania, glabro quidam
-                        sub vultu latens, odorandi vias periculorum occultas perquam sagax. is in Brittanniam missus ut
-                        militares quosdam perduceret ausos conspirasse Magnentio, cum reniti non possent, iussa
-                        licentius supergressus fluminis modo fortunis conplurium sese repentinus infudit et ferebatur
-                        per strages multiplices ac ruinas, vinculis membra ingenuorum adfligens et quosdam obterens
-                        manicis, crimina scilicet multa consarcinando a veritate longe discreta. unde admissum est
-                        facinus impium, quod Constanti tempus nota inusserat sempiterna.</p>
+                    <canvas id="chart" width="502px" height="256px"></canvas>
                 </div>
             </div>
             <!-- ROW 2 -->
@@ -277,6 +272,7 @@
                                 const b = bigint & 255;
                                 return `rgba(${r}, ${g}, ${b}, ${opacity})`;
                             }
+
                         </script>
                     </div>
                 </div>
