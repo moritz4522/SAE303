@@ -183,7 +183,7 @@ const myChart1 = new Chart(
     datasets: [{
         label: '20 ans',
         data: [19.8, 38.8, 46.76, 0.35],
-        backgroundColor: ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'],
+        backgroundColor: ['#FD0000', '#CDE401', '#e0702f', '#F356EE'],
         hoverOffset: 4
     }]
 };
@@ -193,7 +193,7 @@ const data2 = {
     datasets: [{
         label: '80 ans',
         data: [4.8, 57.09, 6.9, 31.2],
-        backgroundColor:  ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'],
+        backgroundColor:  ['#FD0000', '#CDE401', '#e0702f', '#F356EE'],
         hoverOffset: 4
     }]
 };
@@ -254,7 +254,7 @@ function showValue(index) {
 
 // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
 function updateChart(chart, index) {
-    const originalColors =  ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'];
+    const originalColors =  ['#FD0000', '#CDE401', '#e0702f', '#F356EE'];
 
     chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
         return i === index ? color : setOpacity(color, 0.5);
@@ -265,7 +265,7 @@ function updateChart(chart, index) {
 
 // Fonction pour réinitialiser la couleur des graphiques
 function resetChart(chart) {
-    const originalColors = ['#FD0000', '#CDE401', '#FC5C00', '#F356EE'];
+    const originalColors = ['#FD0000', '#CDE401', '#e0702f', '#F356EE'];
     chart.data.datasets[0].backgroundColor = originalColors;
     chart.update();
 }
