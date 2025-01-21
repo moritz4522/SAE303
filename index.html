@@ -131,7 +131,7 @@
                                     <h2 style="text-align: center;  margin-left: -120px;   margin-bottom: 20px;">20 ans</h2>
                                     <canvas id="chart1" style="margin-left: -135px; margin-right: 20px"  ></canvas>
                                     <div id="chart1-label"
-                                        style="position: absolute; top: 55.5%; left: 50%; transform: translate(-110%, -50%); font-size: 40px; font-weight: bold; color: black;">
+                                        style="position: absolute; top: 55.5%; left: 50%; transform: translate(-130%, -30%); font-size: 30px; font-weight: bold; color: black;">
                                     </div>
 
                                 </div>
@@ -157,7 +157,7 @@
                                     <h2 style="text-align: center; margin-left: -120; margin-bottom: 20px;">80 ans</h2>
                                     <canvas id="chart2" style="margin-left: 20px;"></canvas>
                                     <div id="chart2-label"
-                                        style="position: absolute; top: 55%; left: 54%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold; color: black;">
+                                        style="position: absolute; top: 55%; left: 54%; transform: translate(-45%, -30%); font-size: 30px; font-weight: bold; color: black;">
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +169,7 @@
                                     datasets: [{
                                         label: '20 ans',
                                         data: [19.8, 38.8, 46.76, 0.35],
-                                        backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
+                                        backgroundColor: ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'],
                                         hoverOffset: 4
                                     }]
                                 };
@@ -179,7 +179,7 @@
                                     datasets: [{
                                         label: '80 ans',
                                         data: [4.8, 57.09, 6.9, 31.2],
-                                        backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
+                                        backgroundColor:  ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'],
                                         hoverOffset: 4
                                     }]
                                 };
@@ -240,7 +240,7 @@
 
                                 // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
                                 function updateChart(chart, index) {
-                                    const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
+                                    const originalColors =  ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'];
 
                                     chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
                                         return i === index ? color : setOpacity(color, 0.5);
@@ -251,7 +251,7 @@
 
                                 // Fonction pour réinitialiser la couleur des graphiques
                                 function resetChart(chart) {
-                                    const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
+                                    const originalColors =  ['#FF0000', '#FFFF00', '#FF7700', '#E17ADA'];
                                     chart.data.datasets[0].backgroundColor = originalColors;
                                     chart.update();
                                 }
