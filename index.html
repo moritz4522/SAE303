@@ -29,9 +29,10 @@
             <!-- ROW 1 -->
             <!-- POSTER -->
             <div class="col-md-5">
-                <div class="bento-item bento-tall bg-light shadow text-dark d-flex flex-column align-content-start px-3 py-2"
+                <div class="bento-item bento-tall bg-light shadow text-dark d-flex flex-column px-3 py-2"
                     style="height: 100%; width: 100%;">
                     <h4 class="text-left">Notre datalogy</h4>
+                    <p class="fw-light mb-4 px-2">Une datalogy - Data + Analogy - consiste à utiliser une métaphore visuelle, basée sur des éléments du réel pour illustrer des données.</p>
                     <img src="img/affiche.jpg" class="img-fluid" alt="">
                 </div>
             </div>
@@ -40,15 +41,21 @@
                 <div class="bento-medium bg-light shadow text-dark py-4">
                     <h4 class="px-4">Contexte</h4>
                     <p class="fs-6 fw-light px-4 p">Avec qui passons-nous nos journées ? La réponse à cette question
-                        varie considérablement en fonction de notre âge. Après une analyse approfondie de l'étude de  <a
-                                href="https://ourworldindata.org/grapher/time-spent-with-relationships-by-age-us?time=earliest..latest">The World in Data</a>, nous avons réalisé différents graphiques afin de mieux comprendre l’évolution de nos
-                        journées standard et des personnes avec qui nous les partageons. Ce premier graphique ci-dessous, montre l'évolution de la répartition du temps passé avec les différentes personnes en fonction de l'age. Ce graphique est interactif, nous vous invitons à cliquer sur les différentes catégories dans la légende pour les masquer ou les afficher.</p>
+                        varie considérablement en fonction de notre âge. Après une analyse approfondie de l'étude de <a
+                            href="https://ourworldindata.org/grapher/time-spent-with-relationships-by-age-us?time=earliest..latest">The
+                            World in Data</a>, nous avons réalisé différents graphiques afin de mieux comprendre
+                        l’évolution de nos
+                        journées standard et des personnes avec qui nous les partageons. Ce premier graphique
+                        ci-dessous, montre l'évolution de la répartition du temps passé avec les différentes personnes
+                        en fonction de l'age. Ce graphique est interactif, nous vous invitons à cliquer sur les
+                        différentes catégories dans la légende pour les masquer ou les afficher.</p>
                 </div>
 
                 <!-- GRAPHIQUE 1 -->
                 <div class="bento-medium bg-light shadow text-dark py-2 mt-4 mb-6 px-4">
-                    <h4 class="px-2 mb-2 text-left">Evolution du temps passé en fonction des tranches d'âge</h4>
-                    <p class="fw-light mb-4">Cliquez sur les différentes catégories de personnes pour mettre à jour les données !</p>
+                    <h4 class="px-1 mb-2 text-left">Evolution du temps passé (%) en fonction des tranches d'âge</h4>
+                    <p class="fw-light mb-4 px-1">Cliquez sur les différentes catégories de personnes pour mettre à jour les
+                        données !</p>
                     <canvas id="chart" width="502px" height="356px"></canvas>
                 </div>
             </div>
@@ -58,7 +65,10 @@
                 <div
                     class="bento-item bento-tall bg-light text-dark shadow d-flex flex-row justify-content-around px-3 py-5 gap-1">
                     <div class="col-lg-8" style="height: 500px; width: 450px;">
-                        <canvas id="chartRadar"></canvas>
+                        <h4 class="px-1">Répartition du Temps Passé avec Différentes Catégories de Personnes selon les Âges</h4>
+                        <div class="mb-6" style="width:100%;height:90%;"> 
+                            <canvas id="chartRadar"></canvas>
+                        </div>
                     </div>
                     <div class="d-flex flex-column gap-3">
                         <button type="button" class="btn btn-primary btn-sm" onclick="UpdateChart(data20)" id="age"
@@ -83,7 +93,11 @@
             <div class="col-md-4">
                 <div class="bento-tall bg-light shadow text-dark py-4">
                     <h4 class="px-4">Contexte</h4>
-                    <p class="fs-6 fw-light px-4 p">Sur ce deuxième graphique, nous avons isolé différentes tranches d'âge précises (20, 30, 40, 50, 60, 70, 80) afin de permettre une meilleure visualisation des différentes catégories en fonction de l'âge. Ce radar visuel ajoute un aspect interactif et ludique à cette étude tout en permettant de visualiser clairement les différences en fonction de l'âge. </p>
+                    <p class="fs-6 fw-light px-4 p">Sur ce deuxième graphique, nous avons isolé différentes tranches
+                        d'âge précises (20, 30, 40, 50, 60, 70, 80) afin de permettre une meilleure visualisation des
+                        différentes catégories en fonction de l'âge. Ce radar visuel ajoute un aspect interactif et
+                        ludique à cette étude tout en permettant de visualiser clairement les différences en fonction de
+                        l'âge. </p>
                 </div>
             </div>
 
@@ -92,7 +106,12 @@
             <div class="col-md-4">
                 <div class="bento-tall bg-light shadow text-dark py-4">
                     <h4 class="px-4">Contexte</h4>
-                    <p class="fs-6 fw-light px-4 p">Ce dernier graphique réalise une comparaison directe sous forme de camembert entre deux âges bien distincts : 20 ans et 80 ans, ces deux âges étant les plus opposés. Nous avons un aperçu des deux extrêmes : le début et la fin de la vie. Nous constatons que les données à 80 ans n'ont plus rien à voir avec celles à 20 ans. Il est donc intéressant d'analyser les changements dans le quotidien que le fait de vieillir entraîne dans nos vies. </p>
+                    <p class="fs-6 fw-light px-4 p">Ce dernier graphique réalise une comparaison directe sous forme de
+                        camembert entre deux âges bien distincts : 20 ans et 80 ans, ces deux âges étant les plus
+                        opposés. Nous avons un aperçu des deux extrêmes : le début et la fin de la vie. Nous constatons
+                        que les données à 80 ans n'ont plus rien à voir avec celles à 20 ans. Il est donc intéressant
+                        d'analyser les changements dans le quotidien que le fait de vieillir entraîne dans nos vies.
+                    </p>
                 </div>
             </div>
 
@@ -116,18 +135,18 @@
                             </div>
 
                             <div style="position: relative; margin-top: 90px;" class="d-flex flex-column gap-3">
-                                <button type="button" class="btn btn-primary btn-sm" 
-                                        style="background-color: #FD0000; border-color: #FD0000;" 
-                                        onclick="showValue(1)">Seul</button>
-                                <button type="button" class="btn btn-primary btn-sm" 
-                                        style="background-color: #aebe1a; border-color: #aebe1a;" 
-                                        onclick="showValue(0)">Avec ses amis</button>
-                                <button type="button" class="btn btn-primary btn-sm" 
-                                        style="background-color: #e0702f; border-color: #e0702f;" 
-                                        onclick="showValue(2)">Avec sa famille</button>
-                                <button type="button" class="btn btn-primary btn-sm" 
-                                        style="background-color: #F356EE; border-color: #F356EE;" 
-                                        onclick="showValue(3)">Avec son partenaire</button>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    style="background-color: #aebe1a; border-color: #aebe1a;"
+                                    onclick="showValue(1)">Seul</button>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    style="background-color: #FD0000; border-color: #FD0000;"
+                                    onclick="showValue(0)">Avec ses amis</button>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    style="background-color: #e0702f; border-color: #e0702f;"
+                                    onclick="showValue(2)">Avec sa famille</button>
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    style="background-color: #F356EE; border-color: #F356EE;"
+                                    onclick="showValue(3)">Avec son partenaire</button>
                             </div>
 
 
