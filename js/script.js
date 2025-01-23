@@ -108,6 +108,17 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+// Mode bouton active 
+
+const Btns = document.querySelectorAll(".btn");
+
+Btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    Btns.forEach(f => f.classList.remove('active'));
+    e.target.classList.toggle("active");
+  });
+});
+
 // Graphique Moritz
 
 const labels = ['20 ans', '30 ans', '40 ans', '50 ans', '60 ans', '70 ans', '80 ans'];

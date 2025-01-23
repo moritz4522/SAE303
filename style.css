@@ -20,7 +20,8 @@
 }
 
 .active {
-    filter: brightness(80%);    
+    background-color: white;
+    border-color: black;      
 }
 
 img {
@@ -51,29 +52,13 @@ img {
     margin: auto;
 }
 
-.btn-primary {
+.btn-pink {
     background-color: #FF7B7B;
     border-color: #FF7B7B;
 }
 
-.btn-primary:hover {
-    background-color: #ffa3a3;
-    border-color: #FF7B7B;
-}
-
-.btn-primary:active {
-    background-color: #ffa3a3;
-    border-color: #FF7B7B;
-}
-
-.btn-primary::before {
-    background-color: #ffa3a3;
-    border-color: #FF7B7B;
-}
-
-
-.btn-primary::after {
-    background-color: #ffa3a3;
-    border-color: #FF7B7B;
+.btn-pink:hover {
+    background-color: white;
+    border-color: black;
 }
 
