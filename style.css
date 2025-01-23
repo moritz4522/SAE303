@@ -19,6 +19,12 @@
     border-radius: 15px;
 }
 
+.bento-tallest {
+    height: 450px;
+    border-radius: 15px;
+}
+
+
 .active {
     background-color: white;
     border-color: black;      
