@@ -22,9 +22,13 @@ let myChart = new Chart(ctxRadar, {
             datasets: [{
                 label: '20 ans',
                 data: data20, 
+                fill: true,
+                backgroundColor: 'rgba(255,123,123,0.4)',
+                borderColor: 'rgb(255,123,123)'
             }]
         },
         options: {
+            maintainAspectRatio: false,
             events: ['click'],
             responsive: true, 
             scale: {
@@ -70,8 +74,6 @@ function UpdateChart(label) {
     data70: [1, 6, 7, 8, 2, 4],
     data80: [5, 6, 9, 1, 3, 4]
     }
-    //const selectedAge = document.getElementById("age");
-    //let label1 = selectedAge.value;l
     
     myChart.data.datasets[0].label = label.value;
     myChart.data.datasets[0].data = label;
@@ -175,10 +177,6 @@ const myChart1 = new Chart(
 );
 
 
-
-
-
-
 //Diagramme donut
 
   // Données pour le premier diagramme
@@ -186,7 +184,7 @@ const myChart1 = new Chart(
     datasets: [{
         label: '20 ans',
         data: [19.8, 38.8, 46.76, 0.35],
-        backgroundColor: ['#FD0000', '#CDE401', '#e0702f', '#F356EE'],
+        backgroundColor: ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
         hoverOffset: 4
     }]
 };
@@ -196,7 +194,7 @@ const data2 = {
     datasets: [{
         label: '80 ans',
         data: [4.8, 57.09, 6.9, 31.2],
-        backgroundColor:  ['#FD0000', '#CDE401', '#e0702f', '#F356EE'],
+        backgroundColor:  ['#C85631', '#E4E473', '#E2AA60', '#D8988F'],
         hoverOffset: 4
     }]
 };
@@ -257,10 +255,10 @@ function showValue(index) {
 
 // Fonction pour mettre à jour la couleur de la catégorie sélectionnée
 function updateChart(chart, index) {
-    const originalColors =  ['#FD0000', '#CDE401', '#e0702f', '#F356EE'];
+    const originalColors =  ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
 
     chart.data.datasets[0].backgroundColor = originalColors.map((color, i) => {
-        return i === index ? color : setOpacity(color, 0.5);
+        return i === index ? color : setOpacity(color, 0.3);
     });
 
     chart.update();
@@ -268,7 +266,7 @@ function updateChart(chart, index) {
 
 // Fonction pour réinitialiser la couleur des graphiques
 function resetChart(chart) {
-    const originalColors = ['#FD0000', '#CDE401', '#e0702f', '#F356EE'];
+    const originalColors = ['#C85631', '#E4E473', '#E2AA60', '#D8988F'];
     chart.data.datasets[0].backgroundColor = originalColors;
     chart.update();
 }
